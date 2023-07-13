@@ -5,7 +5,7 @@ const {
 
 module.exports = {
   name: 'ban',
-  description: 'Bans a user from the server.',
+  description: 'Bans a member!!',
   // devOnly: Boolean,
   // testOnly: Boolean,
   options: [
@@ -21,6 +21,8 @@ module.exports = {
       type: ApplicationCommandOptionType.String,
     },
   ],
+  permissionsRequired: [PermissionFlagsBits.Administrator],
+  botPermissions: [PermissionFlagsBits.Administrator],
 
   callback: (client, interaction) => {
     interaction.reply(`ban...`);
